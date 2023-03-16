@@ -7,10 +7,20 @@ protocol to a local [OpenTelemetry Collector](https://opentelemetry.io/docs/coll
 Basic usage instructions are available via `-h` as:
 
 ```
-% python3 ./bpftrace-forwarder.py 
+% python3 ./bpftrace-forwarder.py -h
 usage: bpftrace-forwarder.py [-h] [-d DIMENSION] [-v] [-t] metric
-bpftrace-forwarder.py: error: the following arguments are required: metric
-```
+
+parse-trace-data reads a stream of output from bpftrace and parses out the datapoints from the stream.
+
+positional arguments:
+  metric                metric name to report
+
+options:
+  -h, --help            show this help message and exit
+  -d DIMENSION, --dimension DIMENSION
+                        set dimension key value (default="process")
+  -v, --verbose         verbose mode, also echo input to stdout
+  -t, --test            test mode, send output to console```
 
 The forwarder will handle either a single metric value or a set of values which are used for dimensionalizing.
 
