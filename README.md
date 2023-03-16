@@ -20,7 +20,8 @@ options:
   -d DIMENSION, --dimension DIMENSION
                         set dimension key value (default="process")
   -v, --verbose         verbose mode, also echo input to stdout
-  -t, --test            test mode, send output to console```
+  -t, --test            test mode, send output to console
+```
 
 The forwarder will handle either a single metric value or a set of values which are used for dimensionalizing.
 
